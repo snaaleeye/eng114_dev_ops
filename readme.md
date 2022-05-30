@@ -1,6 +1,6 @@
 # DevOps
 
-![DevOps](/Users/sharmakenaaleeye/Desktop/Sparta/devops_diagram.png)
+![DevOps](/Users/sharmakenaaleeye/Desktop/Sparta/devops_diagram.png/)
 
 
 What is DevOps/Role of DevOps?
