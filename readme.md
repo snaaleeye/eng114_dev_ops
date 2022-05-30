@@ -47,6 +47,9 @@ Steps to set up vagrant/virtual box
 7. `Control c` to get shell back
 8. `Exit` - to leave virtual machine
 
+![virtual_box_diagram](https://user-images.githubusercontent.com/105854053/171032011-24f3be0e-e84c-47a6-b707-328b962fc03d.png)
+
+
 ## Linux Commands 
 - `vagrant destroy` - destroy virtual machine
 - `vagrant reload` - reload virtual machine
