@@ -1,17 +1,30 @@
 # DevOps
 
+![DevOps](/Users/sharmakenaaleeye/Desktop/Sparta/devops_diagram.png)
+
+
 What is DevOps/Role of DevOps?
 
 DevOps is the combination of development and operations with a focus of working together, sharing responsibilities, using infrastructure as code to lead to greater efficiency. They use the automation of the deployment pipeline as well as shorter product cycle times using continuous integration, delivery and deployment.
 
-- Why is DevOps in high demand?
+Why is DevOps in high demand?
 
-DevOps eliminates the blame culture and stops working in silos
-Developed an environment to suit all parties. 
+- DevOps eliminates the blame culture 
+- Stops teams from working in silos
+- Developed an environment to suit all parties. 
 
-- What is Development Environment  
+- Ease of use
+- Flexibility 
+- Robustness
+- Cost effective
 
-A development environment is the collection of processes and tools that are used to develop the source code for a program or software product. This involves the entire environment that supports the process end to end, including development, staging and production servers. The development environment automates or facilitates the routines involved in creating, testing, debugging, patching, updating, and maintaining software, including long-term maintenance.
+What is Development Environment  
+
+A development environment is the collection of processes and tools that are used to develop the source code for a program or software product. 
+
+This involves the entire environment that supports the process end to end, including development, staging and production servers. 
+
+The development environment automates or facilitates the routines involved in creating, testing, debugging, patching, updating, and maintaining software, including long-term maintenance.
 
 - What are the four pillars of DevOps
 
@@ -20,12 +33,6 @@ A development environment is the collection of processes and tools that are used
 - Developing
 - Distributing
 
-Sofware Development lifecycle
-
-- Ease of use
-- Flexibility 
-- Robustness
-- Cost effective
 
 sh - secure shell
 .sh used for shell. 
@@ -46,7 +53,6 @@ Steps to set up vagrant/virtual box
 - `vagrant reload` - reload virtual machine
 
 check nginx status `systemctl status nginx` or `stop` or `start` or `restart`
-
 
 
 ## Most used commands
