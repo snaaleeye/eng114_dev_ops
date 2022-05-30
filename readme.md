@@ -1,7 +1,6 @@
 # DevOps
 
-![DevOps](/Users/sharmakenaaleeye/Desktop/Sparta/devops_diagram.png/)
-
+![devops_diagram](https://user-images.githubusercontent.com/105854053/171031722-5e02759d-6969-44f5-91be-094ac07fd612.png)
 
 What is DevOps/Role of DevOps?
 
