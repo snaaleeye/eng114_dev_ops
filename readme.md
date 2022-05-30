@@ -37,11 +37,10 @@ The development environment automates or facilitates the routines involved in cr
 - Developing
 - Distributing
 
+# Steps to set up vagrant/virtual box
 
 sh - secure shell
 .sh used for shell. 
-
-Steps to set up vagrant/virtual box
 
 1. `Vagrant up` - create virtual machine
 2. `Vagrant ssh` - connect to virtual machine from bash.
@@ -55,14 +54,14 @@ Steps to set up vagrant/virtual box
 ![virtual_box_diagram](https://user-images.githubusercontent.com/105854053/171032011-24f3be0e-e84c-47a6-b707-328b962fc03d.png)
 
 
-## Linux Commands 
+# Linux Commands 
 - `vagrant destroy` - destroy virtual machine
 - `vagrant reload` - reload virtual machine
 
 check nginx status `systemctl status nginx` or `stop` or `start` or `restart`
 
 
-## Most used commands
+# Most used commands
 
 - who am I `uname` or `uname-a`
 - where am I `pwd`
