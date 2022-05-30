@@ -17,6 +17,8 @@ Why is DevOps in high demand?
 - Robustness
 - Cost effective
 
+![DevOps Diagram ](https://user-images.githubusercontent.com/105854053/171032718-15a6c0cc-ab54-48d5-bbc9-e7574039db9e.jpeg)
+
 What is Development Environment  
 
 A development environment is the collection of processes and tools that are used to develop the source code for a program or software product. 
@@ -24,6 +26,9 @@ A development environment is the collection of processes and tools that are used
 This involves the entire environment that supports the process end to end, including development, staging and production servers. 
 
 The development environment automates or facilitates the routines involved in creating, testing, debugging, patching, updating, and maintaining software, including long-term maintenance.
+
+![development environment ](https://user-images.githubusercontent.com/105854053/171032835-26b542d0-f234-4a6d-a05c-cd57d5099272.png)
+
 
 - What are the four pillars of DevOps
 
