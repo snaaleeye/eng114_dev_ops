@@ -32,10 +32,10 @@ The development environment automates or facilitates the routines involved in cr
 
 - What are the four pillars of DevOps
 
-- Planning
-- Sourcing
-- Developing
-- Distributing
+- Continuous Planning.
+- Continuous Integration.
+- Continuous Delivery.
+- Continuous Operations.
 
 # Steps to set up vagrant/virtual box
 
