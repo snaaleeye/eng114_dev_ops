@@ -176,7 +176,7 @@ To automate this, you can input the above commands into your provision.sh file.
 
 provision.sh file is very sensitive. I used the below commands and this worked for me.
 
-# nginx status/install
+- nginx status/install
 
 `sudo systemctl status nginx`
 
@@ -184,13 +184,13 @@ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 
 `sudo apt-get install -y nodejs` 
 
-# install npm pm2  
+- install npm pm2  
 `sudo npm install pm2 -g`
 
-# install python software properties
+- install python software properties
 `sudo apt-get install python-software-properties -y`
 
-# install npm and start npm
+- install npm and start npm
 
 `cd app/app/app`
 `sudo npm install -y`
