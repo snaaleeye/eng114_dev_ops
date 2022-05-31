@@ -86,13 +86,14 @@ Uses octal numbers:
 4 - read
 2 - write
 1 - execute
-Add the sum of the numbers of the permissions you want to grant e.g 7 (4 + 2 + 1)
-Read, write, execute is 6 (4 + 2 + 1)
-Complete permissions are given as a three digit number
-Each digit corresponds to a context (owner, group, other)
+
+- Add the sum of the numbers of the permissions you want to grant e.g 7 (4 + 2 + 1)
+- Read, write, execute is 6 (4 + 2 + 1)
+- Complete permissions are given as a three digit number
+- Each digit corresponds to a context (owner, group, other)
 e.g chmod 764 file1 (user = rwx, group = rw and others = read on file1)
-chmod 700 file1 (user = rwx)
-chmod 640 file1 (user = rw, group = r)
+- chmod 700 file1 (user = rwx)
+- chmod 640 file1 (user = rw, group = r)
 https://linuxhandbook.com/chmod-calculator/
 
 ### Bash Scripting 
