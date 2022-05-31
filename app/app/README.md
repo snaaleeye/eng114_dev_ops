@@ -17,6 +17,7 @@ Displays a simple homepage displaying a Sparta logo and message. This page shoul
 ### Blog
 
 ``localhost:3000/posts``
+`http://192.168.56.10:3000`
 
 This page displays a logo and 100 randomly generated blog posts. The posts are generated during the seeding step.
 
@@ -25,6 +26,7 @@ This page and the seeding is only accessible when a database is available and th
 ### A fibonacci number generator
 
 ``localhost:3000/fibonacci/{index}``
+192.168.56.10:3000`
 
 This page has be implemented poorly on purpose to produce a slow running function. This can be used for performance testing and crash recovery testing.
 

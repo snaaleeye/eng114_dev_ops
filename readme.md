@@ -119,3 +119,79 @@ cp provision.sh
 `config.vm.synced_folder ".", "/home/vagrant/"`
 `config.vm.provision "shell", path: "environment/provision.sh"`
 
+
+# App
+
+What key questions should we be asking the Development team before we accept it to deploy it
+- Where does it need to be deployed
+- nodejs - which version of it?
+- How many users can it handle
+- Does it need to be automated
+- What is the time frame
+- What type of request
+- Folder structure
+- What are the dependencies required?
+- Which language does it support?
+
+`Seeds` are related to database - `if` 
+`package.json` this is where all the dependencies are.
+Tells us what versions are `suitable.jd`
+
+Follow these steps to download all the necessary tests needed to run the app:
+
+Run these locally: 
+1. `gem install bundler`
+2. `bundler`
+3. `rake spec` - this checks tests - repeat after ever install. 
+
+You will get errors as not all packages are installed.
+
+These steps are inside the virtual machine:
+`sudo apt-get install nodejs -y` - As the test needs version 6 we need to download that.
+
+Install nodejs version 6:
+1. `curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -`
+2. `sudo apt-get install nodejs -y`
+
+If this does not work try this first then redo steps from above: Also Add sudo as this could be an issue too. 
+1. `sudo npm install pm2 -g`
+
+2. `sudo apt-get install python-software-properties`
+
+Final steps:
+1. `rake spec` should now show all tests have passed. 
+
+Inside app folder inside the virtual machine run these:
+1. `npm install`
+2. `npm start`
+
+The app should now be running when ip address is entered
+`192.168.56.10:3000` and `192.168.56.10:3000/fibonacci/8`
+
+# Automation Task
+
+To automate this, you can input the above commands into your provision.sh file.
+
+`Vagrant reload` does not seem to work for me and I used `vagrant up` whenever I edited the provision.sh file. 
+
+provision.sh file is very sensitive. I used the below commands and this worked for me.
+
+# nginx status/install
+
+`sudo systemctl status nginx`
+
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+
+`sudo apt-get install -y nodejs` 
+
+# install npm pm2  
+`sudo npm install pm2 -g`
+
+# install python software properties
+`sudo apt-get install python-software-properties -y`
+
+# install npm and start npm
+
+`cd app/app/app`
+`sudo npm install -y`
+`sudo npm start -d`
