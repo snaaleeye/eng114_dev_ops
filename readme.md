@@ -80,3 +80,27 @@ check nginx status `systemctl status nginx` or `stop` or `start` or `restart`
 - How to check file permissions `ll` 
 - change permission `chod permission file-name` adding `+x` makes it executable. 
 Can also add numbers such as 400 meaning read only. 
+chmod
+
+Uses octal numbers:
+4 - read
+2 - write
+1 - execute
+Add the sum of the numbers of the permissions you want to grant e.g 7 (4 + 2 + 1)
+Read, write, execute is 6 (4 + 2 + 1)
+Complete permissions are given as a three digit number
+Each digit corresponds to a context (owner, group, other)
+e.g chmod 764 file1 (user = rwx, group = rw and others = read on file1)
+chmod 700 file1 (user = rwx)
+chmod 640 file1 (user = rw, group = r)
+https://linuxhandbook.com/chmod-calculator/
+
+### Bash Scripting 
+- create a file called `provision.sh`
+- change permission of this file `chmod +x provision.sh`
+- first line `MUST BE` strting with `#!/bin/bash`
+- update & upgrade 
+- installed nginx 
+- start nginx
+- `enable nginx` - why this? to make sure it always runs
+- stopped then started  
