@@ -192,6 +192,6 @@ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 
 - install npm and start npm
 
-`cd app/app/app`
+`cd app/app/app` - need to move to this folder in order to run in the right place. 
 `sudo npm install -y`
 `sudo npm start -d`
