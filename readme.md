@@ -108,8 +108,14 @@ https://linuxhandbook.com/chmod-calculator/
 - To run our script `sudo ./provision.sh`
 
 Vagrant Task
-1. `sudo nano file.sh`
-Create a file.sh on your localhost in the same location as vagrantfile
-2. `config.vm.synced_folder ".", "/home/vagrant/"`
-   `config.vm.provision "shell", path: "environment/provision.sh"`
+1. Create a file.sh on your localhost in the same location as vagrantfile
+`sudo nano file.sh`
+
+2. Create a new directory called environment to save your provision.sh locally.
+mkdir environment 
+cp provision.sh
+
+3. Add these commands to your vagrantfile below your existing files. 
+`config.vm.synced_folder ".", "/home/vagrant/"`
+`config.vm.provision "shell", path: "environment/provision.sh"`
 
