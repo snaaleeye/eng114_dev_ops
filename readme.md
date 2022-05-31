@@ -105,3 +105,11 @@ https://linuxhandbook.com/chmod-calculator/
 - start nginx
 - `enable nginx` - why this? to make sure it always runs
 - stopped then started  
+- To run our script `sudo ./provision.sh`
+
+Vagrant Task
+1. `sudo nano file.sh`
+Create a file.sh on your localhost in the same location as vagrantfile
+2. `config.vm.synced_folder ".", "/home/vagrant/"`
+   `config.vm.provision "shell", path: "environment/provision.sh"`
+
