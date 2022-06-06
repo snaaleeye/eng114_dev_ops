@@ -194,4 +194,58 @@ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 
 `cd app/app/app` - need to move to this folder in order to run in the right place. 
 `sudo npm install -y`
-`sudo npm start -d`
+`sudo npm start -d` - -d = detatched mode and runs in background. 
+
+### Creating variables in linux
+
+1. $MY_NAME=Sharmake - This creates the variable
+2. export MY_NAME=Sharmake
+3. `env` - To check where in the environment the new variable is. 
+4. Use printenv MY_NAME to only print variable. 
+
+192.168.10.10
+va
+mongoDB port is DB_Host = IP:27017/POSTS
+
+When an environment variable is set from the shell using the export command, its existence ends when the user’s sessions ends. This is problematic when we need the variable to persist across sessions.
+
+### How to make environment variables persistant?
+
+1. To set permanent environment variables for a single user, edit the .bashrc file:
+
+`sudo nano ~/.bashrc`
+
+2. Write a line for each variable you wish to add using the following syntax:
+
+`export [VARIABLE_NAME]=[variable_value]`
+
+3. Save and exit the file. The changes are applied after you restart the shell. If you want to apply the changes during the current session, use the source command:
+
+`source ~/.bashrc` - This reads the file again and picks it up again.
+
+4. To set permanent environment variables for all users, create an .sh file in the /etc/profile.d folder:
+
+`sudo nano /etc/profile.d/[filename].sh`
+
+5. The syntax to add variables to the file is the same as with `.bashrc`:
+
+Use nginx as reverse proxy
+
+### Setting up Nginx as a reverse proxy server
+1. `sudo nano /etc/nginx/sites-available/default`
+Ensure localhost matches port
+
+    location / {
+        proxy_pass http://localhost:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+
+2. `sudo nginx -t` - to check there are no errors. 
+3. `sudo systemctl restart nginx`
+4. `cd app/app/app npm start`
+
