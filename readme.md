@@ -234,6 +234,8 @@ Use nginx as reverse proxy
 ### Setting up Nginx as a reverse proxy server
 1. `sudo nano /etc/nginx/sites-available/default`
 Ensure localhost matches port
+sudo vim /etc/nginx/sites-available/default
+`restart` (reboots) and `enable` (automatically boots nginx)
 
     location / {
         proxy_pass http://localhost:3000;
@@ -247,5 +249,42 @@ Ensure localhost matches port
 
 2. `sudo nginx -t` - to check there are no errors. 
 3. `sudo systemctl restart nginx`
-4. `cd app/app/app npm start`
+4. `sudo systemctl enable nginx`
+4. cd app/app/app `npm start`
+
+hybrid - half locally and half on cloud
+
+Difference is security of the app belongs to the machine. If someone can hack my machine they can hack the app. When migrating to cloud we create a security code. Build our own firewall and create our own rules. We need a system that can monitor the health our app and alert us with a message/email. We will use cloudwatch to alert us. Simple if block on python if status code = 200, as soon as it is not 200 informs the team. What to do if its late at night, highly scalable and scaleout another instance. We will need a load balancer. Our job is to make sure the app is up and running 24/7. If the app goes down and customer user finds out first, it could be catastrophic for business. Reason for cloud is to avoid single point of failure destroying app. Monolith, two-tier, microservices. Containerisation = Kubernetes + Docker
+
+A traditional `forward proxy` server allows multiple clients to route traffic to an external network. For instance, a business may have a proxy that routes and filters employee traffic to the public Internet.
+
+A `reverse proxy`, on the other hand, routes traffic on behalf of multiple servers.
+
+Vagrant troubleshooting:
+`ls -a`
+`.vagrant` - delete this folder if there are issues. reloads corrupted machine
+
+Open virtual box - close - power off - remove - delete all files 
+
+###
+- How to check process running in linux `top` or `ps aux` 
+- How to kill a process? `sudo kill process-id`
+- How to use piping | to sort out or short list process
+- How to use `head` and `tail`
+
+
+- Create another VM for our db, mongodb
+- Ubuntu 16.04 we'll use the same box as app
+- Configure/install mongodb with correct version
+- Allow the required access, allow ip of our app machine to connect to our db
+- In our app machine by creating an ENV called DB_HOST
+- cd/etc
+- sudo nano mongod.conf - by default it allows access to 127.0.0.1 with port 27017
+- edit mongod.conf to allow app ip or for the ease of use allow all - not best practice for production env - 0.0.0.0
+- restart and enable mongodb
+
+Common errors: 
+- DB_HOST not found as it was created inside db. 
+- Could we allow users to connect to DB? No as it is internal 
+
 

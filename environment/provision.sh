@@ -35,4 +35,3 @@ cd app/app/app
 sudo npm install -y
 sudo npm start -d
 
-
