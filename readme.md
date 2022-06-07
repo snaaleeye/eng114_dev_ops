@@ -260,11 +260,17 @@ A traditional `forward proxy` server allows multiple clients to route traffic to
 
 A `reverse proxy`, on the other hand, routes traffic on behalf of multiple servers.
 
-Vagrant troubleshooting:
-`ls -a`
-`.vagrant` - delete this folder if there are issues. reloads corrupted machine
+### Vagrant troubleshooting:
+1. `ls -a`
+2. `.vagrant` - delete this folder if there are issues. reloads corrupted machine
 
-Open virtual box - close - power off - remove - delete all files 
+or
+
+1. Open virtual box 
+2. close 
+3. power off 
+4. remove 
+5. delete all files 
 
 ###
 - How to check process running in linux `top` or `ps aux` 
@@ -272,6 +278,7 @@ Open virtual box - close - power off - remove - delete all files
 - How to use piping | to sort out or short list process
 - How to use `head` and `tail`
 
+### Multi VM Task
 
 - Create another VM for our db, mongodb
 - Ubuntu 16.04 we'll use the same box as app
@@ -280,11 +287,45 @@ Open virtual box - close - power off - remove - delete all files
 - In our app machine by creating an ENV called DB_HOST
 - cd/etc
 - sudo nano mongod.conf - by default it allows access to 127.0.0.1 with port 27017
-- edit mongod.conf to allow app ip or for the ease of use allow all - not best practice for production env - 0.0.0.0
+- edit mongod.conf to allow app ip or for the ease of use allow all - not best practice for production env - 0.0.0.0 (means allow any)
 - restart and enable mongodb
 
-Common errors: 
+### Common errors: 
 - DB_HOST not found as it was created inside db. 
 - Could we allow users to connect to DB? No as it is internal 
 
 
+### How to install MongoDB
+1. sudo apt-key adv 
+echo "deb https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+
+2. sudo apt-get update -y
+3. sudo apt-get upgrade -y
+
+# sudo apt-get install mongodb-org=3.2.20 -y
+4. sudo apt-get install -y mongodb-org=3.2.20 mongodb-org-server=3.2.20 mongodb-org-shell=3.2.20 mongodb-org-mongos=3.2.20 mongodb-org-tools=3.2.20
+
+5. sudo systemctl start mongod
+6. sudo systemctl enable mongod
+
+To check if installation has been successful
+7. mongo --eval 'db.runCommand({ connectionStatus: 1 })'
+8. sudo systemctl status mongod
+
+
+
+### Creating Mongodb as persistant environment variable
+
+Inside DB environment 
+1. sudo echo "export DB_HOST=mongodb://192.168.56.15:27017/posts" >> ~/.bashrc
+2. source ~/.bashrc
+3. cd /etc mongod.config
+4. Change to 0.0.0.0 
+4. restart mongodb
+Return to app environment 
+5. Create persistant environment variable DB_HOST
+6. sudo echo "export DB_HOST=mongodb://192.168.56.15:27017/posts" >> ~/.bashrc
+7. source ~/.bashrc
+8. npm start
+9. node seeds/seed.js - do this if page loads with missing info
+10. npm start
