@@ -329,3 +329,5 @@ Return to app environment
 8. npm start
 9. node seeds/seed.js - do this if page loads with missing info
 10. npm start
+
+Follow the above steps but keep checking. 
