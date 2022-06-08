@@ -31,6 +31,6 @@ sudo apt-get install python-software-properties -y
 
 # install npm and start npm
 
-cd app/app/app
+cd app/app/
 sudo npm install -y
 sudo npm start -d

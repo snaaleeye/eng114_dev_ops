@@ -192,8 +192,8 @@ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 
 ### install npm and start npm
 
-`cd app/app/app` - need to move to this folder in order to run in the right place. 
-`sudo npm install -y`
+`cd app/app - need to move to this folder in order to run in the right place. 
+`sudo npm install `
 `sudo npm start -d` - -d = detatched mode and runs in background. 
 
 ### Creating variables in linux
@@ -326,8 +326,74 @@ Return to app environment
 5. Create persistant environment variable DB_HOST
 6. sudo echo "export DB_HOST=mongodb://192.168.56.15:27017/posts" >> ~/.bashrc
 7. source ~/.bashrc
+
+cd app
 8. npm start
 9. node seeds/seed.js - do this if page loads with missing info
 10. npm start
 
-Follow the above steps but keep checking. 
+Follow the above steps but keep checking through 3000/posts or /posts if it is working. 
+
+
+### What is Cloud Comuting
+
+Cloud computing is when you use a network of remote servers hosted on the internet to store, manage, and process date, rather than a local server or a personal computer. 
+
+# Benefits
+- Security 
+- Reliability
+- Scalability
+- Collaboration
+- Efficiency and cost effectiveness
+- Flexibility
+- Loss prevention
+- Disaster recovery
+- Automatic Software updates
+- Competitive Edge
+- Sustainability 
+
+https://www.salesforce.com/products/platform/best-practices/benefits-of-cloud-computing/
+
+# How does it fit into DevOps?
+
+3 million hours 
+Security - information security team Biometric 
+Air conditioning - heat for optimisation
+Multiple ways of destroying
+
+Pay as you go 
+Built on premises 
+Helps us release software faster
+Able to adapt quickly
+Not beneficial for small scale/offices/labs
+
+The Monolith
+- Simple but has limitations and complexity 
+- Heavy apps can slow down the start up time
+- Each update results into redeploying the full stack app
+- Challenging to scale up on demand
+- Fruitful for simple and lightweight apps
+
+### What is Amazon Web Services (AWS)
+
+AWS (Amazon Web Services) is a comprehensive, evolving cloud computing platform provided by Amazon that includes a mixture of infrastructure as a service (IaaS), platform as a service (PaaS) and packaged software as a service (SaaS) offerings.
+
+Availability zones are important in case one data centre goes down to avoid having a single point of failure. 
+Where there is a issue with zone, you would be diverted 
+
+### AWS best practices - naming convention
+
+- Maximum number of tags per resource – 10
+- Maximum key length – 127 Unicode characters 
+- Maximum value length – 255 Unicode characters
+- Tag keys and values are case sensitive 
+- Tag keys must be unique per resource  
+- Do not use the “aws:” prefix in your tag name or values because it is reserved for AWS use
+
+- 2 tier architecture deployment
+
+- AWS Service
+
+- EC2 - security group/s
+
+- Data migration to cloud 

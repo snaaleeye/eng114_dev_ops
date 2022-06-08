@@ -1,31 +1,23 @@
 Vagrant.configure("2") do |config|
 
-  config.vm.box = "ubuntu/xenial64"
-  # Add a private network between localhost & VM using ip
-  config.vm.network "private_network", ip: "192.168.56.10"
-  config.vm.provision "shell", path: "./provision.sh"
-  # Sync app folder
-  config.vm.synced_folder ".", "/home/vagrant/app"
-  
+  #config.vm.box = "ubuntu/xenial64"
+  #config.vm.network "private_network", ip: "192.168.56.10"
+  #config.vm.provision "shell", path: "./provision.sh", run: "always"
+  #config.vm.synced_folder ".", "/home/vagrant/app"
 
   config.vm.define "app" do |app|
-   app.vm.box = "ubuntu/xenial64"
-   app.vm.network "private_network", ip: "192.168.56.10"
-   app.vm.provision "shell", path: "./provision_app.sh"
-   app.vm.provision "shell", path: "./default"
-
+  app.vm.box = "ubuntu/xenial64"
+  app.vm.network "private_network", ip: "192.168.56.10"
+  app.vm.provision "shell", path: "./provision_app.sh", run: "always"
   end
-  
+
   config.vm.define "db" do |db|
-   db.vm.box = "ubuntu/xenial64"
-   db.vm.network "private_network", ip: "192.168.56.15"
-   db.vm.provision "shell", path: "./provision_db.sh"
-   db.vm.provision "shell", path: "./mongod.conf"
-   db.vm.provision "shell", inline: "sudo chmod +x provision_db.sh"
-   db.vm.provision "shell", inline: "sudo ./provision_db.sh"
-
+  db.vm.box = "ubuntu/xenial64"
+  db.vm.network "private_network", ip: "192.168.56.15"
+  db.vm.provision "shell", path: "./provision_db.sh", run: "always"
   end
-  # Provisisioning
-  config.vm.provision "shell", path: "./provision.sh"
+
+  config.vm.synced_folder ".", "/home/vagrant/app"
+  # provisisioning
 
 end
