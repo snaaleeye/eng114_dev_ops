@@ -374,6 +374,8 @@ The Monolith
 - Challenging to scale up on demand
 - Fruitful for simple and lightweight apps
 
+<img width="99" alt="Screenshot 2022-06-08 at 14 18 20" src="https://user-images.githubusercontent.com/105854053/172626664-155221fa-f7f1-46cb-8c31-e6a109b1aa86.png">
+
 - AWS Service
 
 - EC2 - security group/s
@@ -394,6 +396,9 @@ Where there is a issue with zone, you would be diverted
 - Most proven operational expertise
 
 AWS has the most extensive global cloud infrastructure. No other cloud provider offers as many Regions with multiple Availability Zones connected by low latency, high throughput, and highly redundant networking. AWS has 84 Availability Zones within 26 geographic regions around the world, and has announced plans for 24 more Availability Zones and 8 more AWS Regions in Australia, Canada, India, Israel, New Zealand, Spain, Switzerland, and United Arab Emirates (UAE). The AWS Region and Availability Zone model has been recognized by Gartner as the recommended approach for running enterprise applications that require high availability.
+
+<img width="810" alt="Screenshot 2022-06-08 at 14 06 38" src="https://user-images.githubusercontent.com/105854053/172626761-20fdcac1-1800-4368-9140-8caf4a40f02a.png">
+
 
 https://aws.amazon.com/what-is-aws/
 
