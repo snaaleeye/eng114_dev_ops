@@ -374,10 +374,6 @@ The Monolith
 - Challenging to scale up on demand
 - Fruitful for simple and lightweight apps
 
-- 2 tier architecture deployment
-
-
-
 - AWS Service
 
 - EC2 - security group/s
