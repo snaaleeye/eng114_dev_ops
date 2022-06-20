@@ -1,36 +1,29 @@
 #!/bin/bash
 
-# update
 sudo apt-get update -y
-
-# upgrade
 sudo apt-get upgrade -y
 
-# install nginx
 sudo apt-get install nginx -y
 
-# start nginx
-sudo systemctl start nginx 
-
-# enable nginx
+sudo systemctl start nginx
 sudo systemctl enable nginx
-
-# test status
-
-sudo systemctl status nginx 
+sudo systemctl status nginx
 
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-
 sudo apt-get install -y nodejs 
-
-# install npm pm2  
+sudo apt-get install npm -y
 sudo npm install pm2 -g
 
-# install python software properties
 sudo apt-get install python-software-properties -y
 
-# install npm and start npm
+mkdir repo
 
-cd app/app/
-sudo npm install -y
-sudo npm start -d
+cd repo
+
+git clone https://github.com/snaaleeye/eng114_dev_ops.git
+
+cd eng114_dev_ops/
+
+sudo mv default /etc/nginx/sites-available/default
+
+sudo systemctl restart nginx
