@@ -1,4 +1,4 @@
-21/06/2022!
+21/06/2022!!
 # DevOps
 
 ![devops_diagram](https://user-images.githubusercontent.com/105854053/171031722-5e02759d-6969-44f5-91be-094ac07fd612.png)
